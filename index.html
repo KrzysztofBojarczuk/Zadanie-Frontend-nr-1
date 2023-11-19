@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Sprawdź liczbę pierwszą</h2>
+      <form onsubmit="checkPrime(event)">
+        <div class="form-group row">
+          <label for="numberInput" class="col-3"
+            >Wprowadź liczbę większą od zera:</label
+          >
+          <div class="col-4">
+            <input
+              type="number"
+              id="numberInput"
+              name="numberInput"
+              class="form-control"
+              min="1"
+              onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))"
+            />
+          </div>
+          <div class="col-2">
+            <button type="submit" class="btn btn-primary">Sprawdź</button>
+          </div>
+        </div>
+      </form>
+      <p id="result"></p>
+      <hr />
+      <p id="positiveCounter" style="display: none"></p>
+      <p id="failureCounter" style="display: none"></p>
+    </div>
+  </body>
+</html>
